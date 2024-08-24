@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Shop</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'chiller', cursive;
+        }
+
+        body {
+    background-image: url("1.jpg");
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    background-color: black;
+    
+    color: #bb925f;
+    font-family: lucida handwriting;
+}
+
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; 
+            background-color: transparent;
+        }
+
+        .title {
+            font-size: 6vw;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #bb925f;
+            text-decoration: none;
+            font-size: 4vw;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            transform: scale(1.2);
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 4vw;
+        }
+
+        .Btitle {
+            font-size: 8vw;
+            margin-top: 60px;
+        }
+
+        .desc {
+            font-size: 5vw;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .wrapper {
+            display: inline-block;
+        }
+
+        button {
+            width: 40vw;
+            height: 15vw;
+            background: linear-gradient(to left top, #0e0c11 50%, #18121c 50%);
+            border: none;
+            color: #fff;
+            font-size: 5vw;
+            letter-spacing: 2px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all .5s;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+        }
+
+        button span {
+            position: absolute;
+            display: block;
+        }
+
+        button span:nth-child(1) {
+            height: 3px;
+            width: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), #f6e58d);
+            animation: span1 2s linear infinite;
+            animation-delay: 1s;
+        }
+
+        @keyframes span1 {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        button span:nth-child(2) {
+            height: 100%;
+            width: 3px;
+            top: -100%;
+            right: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #f6e58d);
+            animation: span2 2s linear infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes span2 {
+            0% {
+                top: -100%;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+
+        button span:nth-child(3) {
+            height: 3px;
+            width: 100%;
+            bottom: 0;
+            right: -100%;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), #f6e58d);
+            animation: span3 2s linear infinite;
+            animation-delay: 3s;
+        }
+
+        @keyframes span3 {
+            0% {
+                right: -100%;
+            }
+            100% {
+                right: 100%;
+            }
+        }
+
+        button span:nth-child(4) {
+            height: 100%;
+            width: 3px;
+            bottom: -100%;
+            left: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0), #f6e58d);
+            animation: span4 2s linear infinite;
+            animation-delay: 4s;
+        }
+
+        @keyframes span4 {
+            0% {
+                bottom: -100%;
+            }
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        button:hover {
+            transform: rotate(-3deg) scale(1.1);
+            box-shadow: 0px 3px 5px rgba(60, 50, 106, 0.4);
+        }
+
+        button:hover span {
+            animation-play-state: paused;
+        }
+
+        .ich {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-icon {
+            width: 24px;
+            height: 24px;
+            padding: 6px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header-icon:hover {
+            transform: scale(1.1);
+        }
+
+        @media (min-width: 768px) {
+            .title {
+                font-size: 2vw;
+            }
+
+            nav a {
+                font-size: 1.5vw;
+            }
+
+            .container {
+                font-size: 1.5vw;
+                padding: 60px 20px;
+            }
+
+            .Btitle {
+                font-size: 4vw;
+            }
+
+            .desc {
+                font-size: 1.5vw;
+                margin-bottom: 50px;
+            }
+
+            button {
+                width: 200px;
+                height: 70px;
+                font-size: 1.2vw;
+            }
+
+            .header-icon {
+                width: 32px;
+                height: 32px;
+            }
+
+            .wrapper {
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="lolo">
+            <img src="logo1.jpg" alt="WebTouch" class="logo">Webtouch Inc
+            
+        </div>
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Collection</a>
+            <a href="#">Shop Now</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="ich">
+            <div class="header-icon">
+                <svg data-name="Layer 1" id="Layer_1" height="32px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><style> .cls-1{fill: none; stroke:#ffb90b;stroke-linecap:round;stroke-linejoin:round; stroke-width:2px;}</style></defs><title/><polyline class="cls-1" points="6 10 15 10 19 39 54 39 57 18 21 18 23.3 34"/><line class="cls-1" x1="31" x2="37" y1="50" y2="50"/><circle class="cls-1" cx="47" cy="50" r="5"/><circle class="cls-1" cx="26" cy="50" r="5"/></svg>
+            </div>
+            <div class="header-icon">
+                <svg height="32px" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="8" x2="24" y1="19.5" y2="19.5"><stop offset="0" style="stop-color:#FACE2E"/><stop offset="1" style="stop-color:#FD9F27"/></linearGradient><path d="M8,26h16v-5c0-4.411-3.589-8-8-8s-8,3.589-8,8V26z" fill="url(#SVGID_1_)"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="13" x2="19" y1="8" y2="8"><stop offset="0" style="stop-color:#FACE2E"/><stop offset="1" style="stop-color:#FD9F27"/></linearGradient><circle cx="16" cy="8" fill="url(#SVGID_2_)" r="3"/><path d="M6,21v6c0,0.552,0.448,1,1,1h18c0.553,0,1-0.448,1-1v-6c0-4.308-2.743-7.977-6.569-9.381C20.393,10.707,21,9.418,21,8c0-3.313-2.687-6-6-6S9,4.687,9,8c0,1.418,0.607,2.707,1.569,3.619C6.743,13.023,4,16.692,4,21z"/></svg>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="Btitle">"Experience Elegance with Every Sip"</div>
+        <p class="desc">Welcome to our exclusive wine collection. Savor the taste of luxury with our carefully selected wines that promise to elevate your moments. From the first sip to the last drop, indulge in an unforgettable experience.</p>
+        <div class="wrapper">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Discover More
+            </button>
+        </div>
+    </section>
+</body>
+</html>
